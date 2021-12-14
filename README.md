@@ -13,7 +13,7 @@ Code for our paper about sampling-based reachability analysis (T. Lew, L. Janson
 * The sensitivity analysis experiment (Section 6.1) can be reproduced by running
 ``python sensitivity.py``
 * The neural network verification experiment (Section 6.2) can be reproduced by running the code available at https://github.com/StanfordASL/nn_robustness_analysis. This code uses a library developed by M. Everett et al, which is available at https://github.com/mit-acl/nn_robustness_analysis.
-* The robust MPC controller (Section 6.3) was implemented by combining sequential convex programming with reachability analysis as in https://github.com/StanfordASL/UP. The only modifications consist of a) epsilon-padding all obstacles and constraints, b) solving each control problem recursively (as in standard MPC), and c) interfacing with [ROS](https://www.ros.org/) and our hardware platform.
+* The robust MPC controller (Section 6.3) was implemented by combining sequential convex programming with reachability analysis as in https://github.com/StanfordASL/UP. The only modifications consist of a) epsilon-padding all obstacles and constraints, b) solving each control problem recursively (as in standard MPC), and c) interfacing with [ROS](https://www.ros.org/) and the hardware platform. Hardware results are available at this link: https://youtu.be/sDkblTwPuEg.
 
 RandUP is an easy-to-implement reachability analysis algorithm. It consists of 1) sampling inputs, 2) propagating them through the reachability map, and 3) taking the epsilon-padded convex hull of the outputs. Sample python code (without epsilon-padding):
 ```bash
